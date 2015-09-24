@@ -97,7 +97,8 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
                     ean="978"+ean;
                 }
                 if(ean.length()<13){
-                    clearFields();
+		// Data will stay if the user mistakenly added 1 or 2 digits after the 10-digit ISBN code.  
+                    //clearFields();
                     return;
                 }
                 //Once we have an ISBN, start a book intent
